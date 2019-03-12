@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= yield(:title) %> | Mike Oh Phone's </title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    
+    <header class="headSec">
+            <h1>Mike's Phone Store</h1>
+      
+      <td><center>
+    <tr><%= link_to "Home",  "/"  %></tr>
+    <tr><%= link_to "Products", "/items" %></tr>
+    <tr><%= link_to "About", about_path %></tr>
+    <tr><%= link_to "Help", help_path %></tr>
+    </center></td>
+    
+     </header>
+
+
+     
+    <div class="container">
+    <%= yield %>
+    </div>
+    
+    
+    
+    
+    <footer class="foot">
+      
+      <center><h1>Thanks for stopping by!</h1></center>
+      
+    </footer>
+    
+    
+    
+  </body>
+</html>
